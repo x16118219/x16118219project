@@ -28,7 +28,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
    test "should get login" do
     get login_path
     assert_response :success
-    assert_select "title", "Login | Horse Racing Merchandise App"
+    assert_select "title", "Log in | Horse Racing Merchandise App"
   end
   
    test "should get register" do
