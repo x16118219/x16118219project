@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create!(name:  "Eoin Mc Cormack",
-             email: "admin@racingshop.com",
+User.create!(name:                  "Eoin Mc Cormack",
+             email:                 "admin@hrm.com",
              password:              "12345678",
              password_confirmation: "12345678",
-             admin: true,
-             activated: true,
-             activated_at: Time.zone.now)
+             admin:                 true,
+             activated:             true,
+             activated_at:          Time.zone.now)
+             

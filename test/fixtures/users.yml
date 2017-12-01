@@ -1,6 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-eoin:
+kenny:
   name: Kenny Powers
-  email: kennypowers@mermen.com
+  email: kenny@mermen.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+max:
+  name: Max Power
+  email: max@hairdryers.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+dan:
+  name: Dan Glibits
+  email: danglibits@ohho.com
+  password_digest: <%=User.digest('password')%>
+  activated: true
+  activated_at: <%= Time.zone.now %>
