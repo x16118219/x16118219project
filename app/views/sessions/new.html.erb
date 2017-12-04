@@ -12,6 +12,8 @@
       
       <%= f.password_field :password, placeholder: "Password", class: 'form-control' %>
       
+      <%= link_to "(forgot password)", new_password_reset_path %>
+      
       <%= f.submit "Log in", class: "btn btn-primary" %>
       
       <%= f.label :remember_me, class: "checkbox inline" do %>

@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create!(name:                  "Eoin Mc Cormack",
-             email:                 "admin@hrm.com",
-             password:              "12345678",
-             password_confirmation: "12345678",
-             admin:                 true,
-             activated:             true,
-             activated_at:          Time.zone.now)
-             
+User.create!( name:                 "Kenny Powers",
+              email:                "kenny@mermen.com",
+              password_digest:      User.digest('password'),
+              remember_digest:      true,
+              password:             "12345678",
+              password_confirmation:"12345678",
+              admin:                true,
+              activated:            true,
+              activated_at:         Time.zone.now)

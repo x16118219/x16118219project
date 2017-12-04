@@ -4,6 +4,7 @@ kenny:
   name: Kenny Powers
   email: kenny@mermen.com
   password_digest: <%= User.digest('password') %>
+  remember_digest: true
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %>
