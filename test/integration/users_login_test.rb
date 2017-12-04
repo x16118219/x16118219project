@@ -3,7 +3,7 @@ require 'test_helper'
 class UsersLoginTest < ActionDispatch::IntegrationTest
 
   def setup
-    @user = users(:max)
+    @user = users(:kenny)
   end
 
   test "login with valid information followed by logout" do
@@ -29,7 +29,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   end
   
   test "login with remembering" do
-    log_in_as(@user, remember_me: '1')
+    log_in_as(@user, remember_me: '1') 
     assert_not_empty cookies['remember_token']
   end
 

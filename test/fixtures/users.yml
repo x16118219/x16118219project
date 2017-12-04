@@ -21,3 +21,94 @@ dan:
   password_digest: <%=User.digest('password')%>
   activated: true
   activated_at: <%= Time.zone.now %>
+
+ba:
+  name: Bosco Bad Attitude Baracus 
+  email: ba@ateam.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+hannibal:
+  name: John Hannibal Smith 
+  email: hannibal@ateam.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+    
+face:
+  name: Templeton Faceman Peck 
+  email: face@ateam.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+murdock:
+  name: HM Howling Mad Murdock 
+  email: murdock@ateam.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+michael:
+  name: Michael Knight 
+  email: michael@kitt.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+garth:
+  name: Garth 
+  email: garth@karr.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+tj:
+  name: TJ Hooker 
+  email: tj@lcpd.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+bo:
+  name: Bo Duke 
+  email: bo@hazard.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+luke:
+  name: Luke Duke 
+  email: luke@hazzard.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+daisy:
+  name: Daisy Duke 
+  email: daisy@hazzard.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+jesse:
+  name: Jesse Duke 
+  email: jesse@hazzard.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+rosco:
+  name: Rosco Coltrane 
+  email: rosco@sherrif.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  
+boss:
+  name: Boss Hogg 
+  email: boss@commissioner.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>

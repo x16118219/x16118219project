@@ -11,8 +11,8 @@ gem 'rails', '~> 5.1.4'
 gem 'jquery-rails'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
+# # Use Puma as the app server
+# gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -32,6 +32,10 @@ gem 'rails-controller-testing', :git => 'git://github.com/rails/rails-controller
 # gem 'redis', '~> 3.0'
 #Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.11'
+# allows for pagination
+gem 'will_paginate', '~> 3.1.5'
+# allows for bootstrapping of pagination
+gem 'bootstrap-will_paginate', '~> 1.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -58,4 +62,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-ruby "2.4.1"
+  ruby "2.4.2"

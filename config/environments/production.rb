@@ -86,13 +86,14 @@ Rails.application.configure do
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
-end
+  end
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
-   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+  #host = 'rails-container-steevo51.c9users.io/'
   host = 'infinite-ravine-17937.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
