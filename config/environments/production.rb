@@ -47,7 +47,7 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
 
-  # Use the lowest log level to ensure availability of diagnostic information
+  # Use the lowest log level to ensure availability of diagnostic binformation
   # when problems arise.
   config.log_level = :debug
 
@@ -86,7 +86,7 @@ Rails.application.configure do
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
-  end
+  end 
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
@@ -94,7 +94,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   #host = 'rails-container-steevo51.c9users.io/'
-  host = 'infinite-ravine-17937.herokuapp.com'
+  host = 'rocky-beyond-60158.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
@@ -105,6 +105,5 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
-  
   
 end
