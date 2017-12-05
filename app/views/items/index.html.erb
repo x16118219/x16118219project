@@ -35,3 +35,47 @@
 <br>
 
 <%= link_to 'New Item', new_item_path %>
+
+<html>
+  <head>
+    <title>Pixel Perfect</title>
+
+    <!-- Normalize HTML5 Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+
+    <!-- styles.css Link -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Responsive Shizz -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+  </head>
+
+  <body>
+    <div class="banner">
+      <div class="wrapper">
+        <h1>Pixel Perfect<br>Design Resources</h1>
+      </div>
+    </div>
+    
+    <div class="nav">
+      <div class="wrapper">
+        <a href="#">Popular</a>
+        <a href="#">Recent</a>
+        <label for="search">Search</label>
+        <input type="search" id="search" placeholder="Picture Arkle Guinness">
+      </div>
+    </div>
+    
+    <ul class="resources">
+      <li>
+        <%= link_to image_tag("1.jpg"),
+          '/' %>
+          <%= link_to image_tag("2.jpg"),
+          '/' %>
+       
+      </li>
+    </ul>
+    
+
+  </body>
+</html>
