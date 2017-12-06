@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get     '/cart',            to:  'cart#index'
   get     '/cart/clear',      to:  'cart#clearCart'
   get     '/cart/:id',        to:  'cart#add'
-  get     '/cart/:image_url',  to:   'cart#image_url'
+  get     '/cart/:image_url', to:  'cart#image_url'
   
   delete  '/logout',          to: 'sessions#destroy'
   
