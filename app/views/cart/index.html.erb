@@ -1,28 +1,44 @@
-<h1>Cart#index</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
-
 <h1>Your Cart</h1>
 <% if @cart.empty? %>
     <p> Your cart is empty</p>
-<% end %>
+<%end%>
 
 <% total = 0 %>
 
-        <tr>
-            <td class="legend"></td>
-            <td class="legend">Item</td>
-            <td class="legend">Price</td>
-            <td class="legend">Qty</td>
-            <td class="legend">Total</td>
-        </tr>
-
-        <% @cart.each do |id,quantity| %>
-            <%= item = Item.find_by_id(id) %>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <%= render form_for(item, @cart) %>
-                    </div>
-                </div>
-            <% end %>
-        <% end %>
-end
+<table class="cart">
+    <tr>
+        <td class="legend"></td>
+        <td class="legend">Item</td>
+        <td class="legend">Price</td>
+        <td class="legend">Qty</td>
+        <td class="legend">Total</td>
+    </tr>
+    
+<% @cart.each do |id,quantity| %>
+    <% item = Item.find_by_id(id) %>
+    <tr>
+    <td>
+        <div class="image">
+            <%= link_to item_path(:image_url), item %>
+        </div>
+    </td>
+    <td class="title"><%= link_to item_path(:title), item %></td>
+    <td class="price"><%= item_path(:price) %></td>
+    <td class="quantity"><%= quantity %></td>
+    <td class="price"><%= quantity * item_path(:price).to_i %></td>
+    </tr>
+    <% total += quantity * item_path(:price).to_i %>
+    <% end %>
+    
+<tr>
+    <td colspan="4">
+        <div class="total">Total:</div>
+    </td>
+    <td>
+        <div class="price"><%= number_to_currency(total, :unit => "€")%></div>
+    </td>
+</tr>
+</table>
+<p>
+    <%= link_to "Continue Shopping", :controller => :items %>
+</p>

@@ -1,7 +1,8 @@
 <h1>Products Catalogue</h1>
 <br>
-<table class="catalog">
-    <% @items.each do |item| %>
+<table class="catalogue">
+  
+  <% @items.each do |item| %>
       <tr>
         <td>
           <div class="image">
@@ -17,19 +18,16 @@
              <%= number_to_currency(item.price, :unit => "€") %>
           </div>
           <div class="links">
-            <% if session[:login] ==1 %>
-              <%= link_to 'Edit', edit_item_path(item) %>
-              <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%else%>
+            <% if @admin_user = true && @items.empty? %>
+              <%= link_to 'Add New Item', new_item_path %>
+            <% elsif @admin_user = true %>
+              <%= link_to 'Edit Item', edit_item_path(item) %>
+              <%= link_to 'Destroy Item', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Add New Item', new_item_path %>
+            <% end %>
               <a href="/cart/<%= item.id %>">Add to Cart</a>
-            <%end%>  
         </div>
         </td>
       </tr>
     <% end %>
 </table>
-
-<br>
-<% if session[:login]==1%>
-<p><%= link_to 'New Item', new_item_path %></p>
-<%end%>
