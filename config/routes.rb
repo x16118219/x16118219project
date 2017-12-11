@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get     '/cart/:id',        to:  'cart#add'
   get     '/cart/:image_url', to:  'cart#image_url'
   
+  get     '/cart/remove/:id', to:   'cart#remove'
+  
   delete  'logout',          to:   'sessions#destroy'
   
   resources :users
@@ -30,5 +32,6 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :items
   resources :relationships, only: [:create, :destroy]
+ 
          
 end
