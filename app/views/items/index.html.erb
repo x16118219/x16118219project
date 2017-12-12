@@ -1,4 +1,4 @@
-<h1>Products Catalogue</h1>
+<h1>Products Listing</h1>
 <br>
 <table class="catalogue">
   
@@ -11,16 +11,13 @@
           <div class="title">
             <%= link_to item.title, item %>
           </div>
-          <div class="description">
-            <%= item.description %>
-          </div>  
           <div class="price">
              <%= number_to_currency(item.price, :unit => "€") %>
           </div>
           <div class="links">
-            <% if @admin_user = true && @items.empty? %>
+            <% if logged_in? && @admin_user %>
               <%= link_to 'Add New Item', new_item_path %>
-            <% elsif @admin_user = true %>
+            <% elsif admin_user = true %>
               <%= link_to 'Edit Item', edit_item_path(item) %>
               <%= link_to 'Destroy Item', item, method: :delete, data: { confirm: 'Are you sure?' } %>
               <%= link_to 'Add New Item', new_item_path %>

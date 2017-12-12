@@ -23,7 +23,7 @@ namespace :users do
                     activated:            false,
                     activated_at:         Time.zone.now)
 
-    activated =     User.create( name:    "Activated User",
+    activated =     User.create( name:    "John Activated",
                     email:                "a@b.com",
                     password_digest:      User.digest('password'),
                     remember_digest:      true,

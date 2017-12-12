@@ -1,0 +1,22 @@
+<h1>Search Results</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+
+  <% if @search.search_items.empty? %>
+    <p>No Results Found</p>
+  <% else %>
+    <% @search.search_items.each do |c| %>
+      <br>
+      
+      <div class="image">
+        <%= link_to (image_tag c.image_url, :style => "height:100px"), c %>
+      </div>
+      <div class="div">
+        <p><%= c.title %></p>
+        <p>Price: €<%= c.price %></p>
+        <p>Category: <%= c.category %></p>
+        <a href="/cart/<%= c.id %>">Add to Cart</a>
+      </div>
+      
+    <% end %>
+  <% end %>

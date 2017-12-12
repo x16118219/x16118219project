@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   
   def home
+    @categories = Category.all
   end
   
   def login
@@ -23,5 +24,11 @@ class StaticPagesController < ApplicationController
   
   def help
   end
+  
+  def category
+    st = params[:title]
+    @items = Item.where("category like ?" , st)
+  end
+
   
 end
