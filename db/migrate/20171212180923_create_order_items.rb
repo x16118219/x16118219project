@@ -4,11 +4,6 @@ class CreateOrderItems < ActiveRecord::Migration[5.1]
      
       t.decimal :total
       
-      t.cart :references, foreign_key: true
-      t.item :references, foreign_key: true
-      t.order :references, foreign_key: true
-
-
       t.timestamps
     end
   end

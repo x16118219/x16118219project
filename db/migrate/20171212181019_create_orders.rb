@@ -4,8 +4,6 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       
       t.integer :order_number
       
-      t.user :references, foreign_key: true
-      
       t.timestamps
     end
   end

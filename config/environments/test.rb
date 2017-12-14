@@ -33,8 +33,8 @@ Rails.application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
-  config.action_mailer.default_url_options = { host: 'blooming-coast-32299.herokuapp.com/' }
-  # config.action_mailer.default_url_options = { host: 'rails-container-steevo51.c9users.io' }
+  #config.action_mailer.default_url_options = { host: 'blooming-coast-32299.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'rails-container-steevo51.c9users.io' }
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
